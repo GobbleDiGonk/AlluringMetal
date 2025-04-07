@@ -34,6 +34,7 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         playerInput();
+
         speedControl();
 
         grounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + 0.2f, whatIsGround);
@@ -42,6 +43,15 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.linearDamping = groundDrag;
         }
+        else
+        {
+            rb.linearDamping = 0;
+        }
+    }
+
+    private void FixedUpdate()
+    {
+        playerMovement();
     }
 
     public void playerInput()
@@ -54,15 +64,13 @@ public class PlayerMovement : MonoBehaviour
     {
         movementDirection = orientation.forward * verticalMovement + orientation.right * horizontalMovement;
 
-        if(grounded)
-        {
-            rb.AddForce(movementDirection.normalized * speed * 10f, ForceMode.Force);
-        }
+        rb.AddForce(movementDirection.normalized * speed * 10f, ForceMode.Force);
+        
     }
 
     private void speedControl()
     {
-        Vector3 flatVel = new Vector3(rb.linearVelocity.x, 0f, rb.linearVelocity.y);
+        Vector3 flatVel = new Vector3(rb.linearVelocity.x, 0f, rb.linearVelocity.z);
 
         if(flatVel.magnitude > speed)
         {
