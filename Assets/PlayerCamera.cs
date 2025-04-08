@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Rotation : MonoBehaviour
+public class PlayerCamera : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -8,4 +8,9 @@ public class Rotation : MonoBehaviour
         
     }
 
-
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+}
