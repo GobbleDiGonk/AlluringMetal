@@ -6,6 +6,19 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 4bce050b180dfef4ab964119bca475bb
+  - enabled: 1
     path: Assets/Scenes/MainLevel.unity
     guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/Scenes/MainLevelFinale.unity
+    guid: 0330f93150fa2d84dbcc778339e62cdc
+  - enabled: 1
+    path: Assets/Scenes/GameComplete.unity
+    guid: b68820f182e7f714d9af9bf69e0d18dc
+  - enabled: 1
+    path: Assets/Scenes/FailedMenu.unity
+    guid: 71469fdad8917d74dbd6ec507bc5751d
   m_configObjects: {}
+  m_UseUCBPForAssetBundles: 0

@@ -18,19 +18,25 @@ public class ResponseFails : MonoBehaviour
     public void loadFailText1()
     {
         failText1.SetActive(true);
+        failText2.SetActive(false);
+        failText3.SetActive(false);
         responses.SetActive(false);
         npcText.SetActive(false);
         failResponses.SetActive(true);
     }
     public void loadFailText2()
     {
+        failText1.SetActive(false);
         failText2.SetActive(true);
+        failText3.SetActive(false);
         responses.SetActive(false);
         npcText.SetActive(false);
         failResponses.SetActive(true);
     }
     public void loadFailText3()
     {
+        failText1.SetActive(false);
+        failText2.SetActive(false);
         failText3.SetActive(true);
         responses.SetActive(false);
         npcText.SetActive(false);
